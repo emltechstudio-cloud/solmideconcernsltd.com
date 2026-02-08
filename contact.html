@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us – Solmide Concerns Limited</title>
+    <meta name="description" content="Contact Solmide Concerns Limited for construction quotes and consultations. Call, WhatsApp, email, or visit our office in Ogun, Nigeria.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CLEAN CONTACT PAGE STYLES */
+        .contact-hero {
+            min-height: 50vh;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+        
+        /* Contact Methods - Clean Grid */
+        .contact-methods-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (min-width: 768px) {
+            .contact-methods-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .contact-methods-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .contact-method {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 220px; /* Fixed height for uniformity */
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-icon {
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-method h3 {
+            color: var(--green);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .contact-method p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        /* All buttons same size */
+        .contact-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--black);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 0.9rem;
+            width: 140px; /* Fixed width */
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            background: #ffed4e;
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+        }
+        
+        /* Contact Info Section */
+        .contact-info-section {
+            background: #f8f8f8;
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        @media (min-width: 992px) {
+            .info-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        /* Business Hours - Clean */
+        .business-hours {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .business-hours h3 {
+            color: var(--green);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        .hours-list {
+            list-style: none;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .hours-day {
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .hours-time {
+            color: var(--green);
+            font-weight: 600;
+        }
+        
+        /* Location & Tips */
+        .location-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .location-box h3 {
+            color: var(--green);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .location-box p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tips-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .tips-box h3 {
+            color: var(--green);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .tips-box ul {
+            padding-left: 1.2rem;
+            color: #555;
+        }
+        
+        .tips-box li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        
+        /* Quick WhatsApp Section */
+        .whatsapp-action {
+            background: #25D366;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .whatsapp-action h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .whatsapp-action p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        .whatsapp-action .contact-btn {
+            background: white;
+            color: #25D366;
+            font-weight: bold;
+            padding: 12px 25px;
+            width: auto;
+        }
+        
+        .whatsapp-action .contact-btn:hover {
+            background: #f8f8f8;
+        }
+        
+        /* Response Info */
+        .response-info {
+            background: rgba(0, 100, 0, 0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .response-info h4 {
+            color: var(--green);
+            margin-bottom: 0.5rem;
+        }
+        
+        .response-info p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
+        /* Section Title */
+        .contact-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--green);
+            margin-bottom: 2.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="logo.jpg" alt="Solmide Logo" class="logo-img">
+                <div class="logo-text">
+                    <div class="site-title">Solmide Concerns Ltd</div>
+                    <div class="site-tagline">Built Strong. Built to Last.</div>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- HERO -->
+        <section class="hero-section contact-hero">
+            <div class="content-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">CONTACT US</h1>
+                    <p class="hero-subtitle">Get in touch for quotes, consultations, or project discussions</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT MAIN -->
+        <div class="contact-container">
+            <h2 class="contact-title">Get In Touch</h2>
+            
+            <!-- Contact Methods - CLEAN GRID -->
+            <div class="contact-methods-grid">
+                <!-- Phone -->
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Speak directly with our project manager for immediate assistance</p>
+                    <a href="tel:+2348038378739" class="contact-btn">CALL NOW</a>
+                </div>
+                
+                <!-- WhatsApp -->
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Quick quotes and instant responses with photo sharing</p>
+                    <a href="https://wa.me/+2348038378739" class="contact-btn whatsapp-btn">CHAT NOW</a>
+                </div>
+                
+                <!-- Email -->
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>For detailed inquiries and formal documentation</p>
+                    <a href="mailto:solmideconcernslimited@gmail.com" class="contact-btn">SEND EMAIL</a>
+                </div>
+                
+                <!-- Site Visit -->
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Site Visit</h3>
+                    <p>Schedule a consultation for accurate assessment</p>
+                    <a href="https://wa.me/+2348038378739?text=I%20want%20to%20schedule%20a%20site%20visit" class="contact-btn">SCHEDULE</a>
+                </div>
+            </div>
+
+            <!-- Contact Info Section -->
+            <div class="contact-info-section">
+                <div class="info-grid">
+                    <!-- Left Side - Business Info -->
+                    <div>
+                        <!-- Business Hours -->
+                        <div class="business-hours">
+                            <h3><i class="far fa-clock"></i> Business Hours</h3>
+                            <ul class="hours-list">
+                                <li>
+                                    <span class="hours-day">Monday - Friday</span>
+                                    <span class="hours-time">8:00 AM - 6:00 PM</span>
+                                </li>
+                                <li>
+                                    <span class="hours-day">Saturday- </span>
+                                    <span class="hours-time">__9:00 AM - 4:00 PM</span>
+                                </li>
+                                <li>
+                                    <span class="hours-day">Sunday</span>
+                                    <span class="hours-time">Emergency Only</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Location -->
+                        <div class="location-box">
+                            <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+                            <p><strong>Base:</strong> Ogun, Nigeria</p>
+                            <p>We serve clients throughout Nigeria with projects in Lagos, Ogun, Oyo, and surrounding states.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side - Quick Tips -->
+                    <div>
+                        <div class="tips-box">
+                            <h3><i class="fas fa-lightbulb"></i> For Accurate Quotes</h3>
+                            <p>Provide these details for best results:</p>
+                            <ul>
+                                <li>Project location/address</li>
+                                <li>Size and measurements</li>
+                                <li>Preferred materials</li>
+                                <li>Timeline expectations</li>
+                                <li>Reference photos if available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick WhatsApp Action -->
+            <div class="whatsapp-action">
+                <h3><i class="fab fa-whatsapp"></i> Need Immediate Response?</h3>
+                <p>Get fastest quotes and responses via WhatsApp. Send photos and measurements for accurate pricing.</p>
+                <a href="https://wa.me/+2348038378739?text=Hi%20Solmide,%20I%20need%20a%20quote%20for%20my%20construction%20project" class="contact-btn">
+                    <i class="fab fa-whatsapp"></i> QUICK WHATSAPP QUOTE
+                </a>
+            </div>
+
+            <!-- Response Time -->
+            <div class="response-info">
+                <h4><i class="fas fa-bolt"></i> Response Time</h4>
+                <p>We respond to all inquiries within <strong>24 hours</strong>. WhatsApp messages get fastest response during business hours.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <span><a href="tel:+2348038378739">+234 803 837 8739</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:solmideconcernslimited@gmail.com">solmideconcernslimited@gmail.com</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ogun, Nigeria</span>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://facebook.com/Solmide" class="social-link" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/+2348038378739" class="social-link" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#aluminum">Aluminum Works</a></li>
+                    <li><a href="services.html#construction">House Construction</a></li>
+                    <li><a href="services.html#coordination">Project Coordination</a></li>
+                    <li><a href="services.html#realestate">Real Estate Services</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            Solmide Concerns Limited © 2026 | CAC Registered: RC 8540703<br>
+            Built by <a href="https://emltechstudio.site" target="_blank">EML Tech Studio</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Catalog – Solmide Concerns Limited</title>
+    <meta name="description" content="Browse our project catalog directly on WhatsApp. View our completed aluminum and construction work in Nigeria.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* SIMPLE CATALOG PAGE */
+        .catalog-hero {
+            min-height: 60vh;
+        }
+        
+        .catalog-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        
+        .catalog-icon {
+            font-size: 4rem;
+            color: #25D366;
+            margin-bottom: 2rem;
+        }
+        
+        .catalog-title {
+            font-size: 2.5rem;
+            color: var(--green);
+            margin-bottom: 1.5rem;
+        }
+        
+        .catalog-message {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 3rem;
+        }
+        
+        /* WhatsApp Catalog Button */
+        .whatsapp-catalog-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: #25D366;
+            color: white;
+            padding: 18px 40px;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 3rem 0;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 350px;
+        }
+        
+        .whatsapp-catalog-btn:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(37, 211, 102, 0.2);
+        }
+        
+        /* Simple Note */
+        .catalog-note {
+            background: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+            text-align: center;
+            border-top: 3px solid var(--gold);
+        }
+        
+        .catalog-note p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        /* Catalog Info */
+        .catalog-info {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .catalog-info h4 {
+            color: var(--green);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .catalog-info ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .catalog-info li {
+            color: #666;
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            text-align: left;
+        }
+        
+        .catalog-info li:before {
+            content: "•";
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .catalog-title {
+                font-size: 2rem;
+            }
+            
+            .catalog-message {
+                font-size: 1rem;
+            }
+            
+            .whatsapp-catalog-btn {
+                padding: 16px 30px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="logo.jpg" alt="Solmide Logo" class="logo-img">
+                <div class="logo-text">
+                    <div class="site-title">Solmide Concerns Ltd</div>
+                    <div class="site-tagline">Built Strong. Built to Last.</div>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="catalog.html" class="active">Catalog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- HERO -->
+        <section class="hero-section catalog-hero">
+            <div class="content-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">PROJECT CATALOG</h1>
+                    <p class="hero-subtitle">View Our Completed Work Directly on WhatsApp</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATALOG CONTENT -->
+        <div class="catalog-container">
+            <div class="catalog-icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            
+            <h2 class="catalog-title">Browse Our Catalog on WhatsApp</h2>
+            
+            <p class="catalog-message">
+                Click below to open our WhatsApp catalog and view images of our completed aluminum works and construction projects.
+            </p>
+            
+            <!-- WhatsApp Catalog Button - DIRECT LINK TO CATALOG -->
+            <a href="https://wa.me/c/XXXXXXXXXX" 
+               class="whatsapp-catalog-btn" 
+               target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                OPEN CATALOG ON WHATSAPP
+            </a>
+            
+            <!-- Catalog Info -->
+            <div class="catalog-info">
+                <h4>What's in our catalog:</h4>
+                <ul>
+                    <li>Images of completed aluminum works</li>
+                    <li>Construction project photos</li>
+                    <li>Material samples and finishes</li>
+                    <li>Recent project showcases</li>
+                </ul>
+            </div>
+            
+            <!-- Important Note -->
+            <div class="catalog-note">
+                <p>
+                    <strong>Note:</strong> Our catalog shows examples of our work. 
+                    For complete services list, visit our <a href="services.html" style="color: var(--green); font-weight: bold;">Services Page</a>.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <span><a href="tel:+2348038378739">+234 803 837 8739</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:solmideconcernslimited@gmail.com">solmideconcernslimited@gmail.com</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ogun, Nigeria</span>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://facebook.com/Solmide" class="social-link" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/+2348038378739" class="social-link" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#aluminum">Aluminum Works</a></li>
+                    <li><a href="services.html#construction">House Construction</a></li>
+                    <li><a href="services.html#coordination">Project Coordination</a></li>
+                    <li><a href="services.html#realestate">Real Estate Services</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            Solmide Concerns Limited © 2026 | CAC Registered: RC 8540703<br>
+            Built by <a href="https://emltechstudio.site" target="_blank">EML Tech Studio</a>
+        </div>
+    </footer>
+</body>
+</html>

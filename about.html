@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us – Solmide Concerns Limited</title>
+    <meta name="description" content="Learn about Solmide Concerns Limited - 25+ years of construction excellence in Nigeria. Our story, expertise, and commitment to quality.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for about page */
+        .about-hero {
+            min-height: 50vh;
+        }
+        
+        .story-section {
+            padding: 3rem 0;
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 992px) {
+            .story-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .story-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .story-image img:hover {
+            transform: scale(1.03);
+        }
+        
+        .story-content {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .story-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .values-section {
+            background: #f8f8f8;
+            padding: 3rem 0;
+            margin: 3rem 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .value-icon {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .value-card h3 {
+            color: var(--green);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .milestones-section {
+            padding: 3rem 0;
+        }
+        
+        .milestone-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .milestone-item:last-child {
+            border-bottom: none;
+        }
+        
+        .milestone-year {
+            background: var(--gold);
+            color: var(--black);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .milestone-content h3 {
+            color: var(--green);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .cert-badge {
+            display: inline-block;
+            background: var(--green);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+            border: 2px solid var(--gold);
+        }
+        
+        .team-philosophy {
+            background: var(--green);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-radius: 8px;
+        }
+        
+        .team-philosophy h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .team-philosophy p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="logo.jpg" alt="Solmide Logo" class="logo-img">
+                <div class="logo-text">
+                    <div class="site-title">Solmide Concerns Ltd</div>
+                    <div class="site-tagline">Built Strong. Built to Last.</div>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- HERO -->
+        <section class="hero-section about-hero">
+            <div class="content-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">ABOUT SOLMIDE</h1>
+                    <p class="hero-subtitle">25+ Years of Building Excellence in Nigeria</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR STORY -->
+        <section class="content-container story-section">
+            <h2 class="section-title">Our Story</h2>
+            
+            <div class="story-grid">
+                <div class="story-content">
+                    <p>Founded in the early 2000s, <strong>Solmide Concerns Limited</strong> began as a specialized aluminum fabrication workshop in Ogun State, Nigeria. What started with crafting quality aluminum windows and doors for local homes and businesses has grown into a comprehensive construction and general contracting company serving clients across Nigeria.</p>
+                    
+                    <p>Our founder's vision was simple: <strong>"Build it right, build it once."</strong> This philosophy guided our early years and continues to define our approach today. We understood that in the Nigerian construction industry, quality and durability weren't just preferences—they were necessities.</p>
+                    
+                    <p>From those humble beginnings, we've expanded our expertise while maintaining our core commitment to craftsmanship. Today, we're proud to be <strong>CAC Registered (RC 8540703)</strong> and have built a reputation for structures that don't just meet standards, but set them.</p>
+                    
+                    <div class="cert-badge">
+                        CAC Registered: RC 8540703
+                    </div>
+                </div>
+                
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Construction Team Working">
+                </div>
+            </div>
+        </section>
+
+        <!-- MILESTONES -->
+        <section class="content-container milestones-section">
+            <h2 class="section-title">Our Journey</h2>
+            
+            <div class="milestones">
+                <div class="milestone-item">
+                    <div class="milestone-year">2000s</div>
+                    <div class="milestone-content">
+                        <h3>Founding Years</h3>
+                        <p>Started as an aluminum fabrication workshop specializing in windows and doors. Built reputation for quality craftsmanship.</p>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="milestone-item">
+                    <div class="milestone-year">2015~20s</div>
+                    <div class="milestone-content">
+                        <h3>Full-Service Construction</h3>
+                        <p>Began offering complete house construction services. Developed our project coordination model to manage all aspects of construction projects.</p>
+                    </div>
+                </div>
+                
+                <div class="milestone-item">
+                    <div class="milestone-year">Present</div>
+                    <div class="milestone-content">
+                        <h3>Industry Leadership</h3>
+                        <p>Now serving clients across Nigeria with 1500+ projects completed. Maintaining our core aluminum expertise while offering comprehensive construction solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR VALUES -->
+        <section class="values-section">
+            <div class="content-container">
+                <h2 class="section-title">Our Values</h2>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Quality First</h3>
+                        <p>We never compromise on materials or craftsmanship. Every project receives the same attention to detail, whether it's a single window or an entire building.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Direct Communication</h3>
+                        <p>No middlemen, no subcontractor confusion. You work directly with our team from start to finish for clear communication and accountability.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Structural Integrity</h3>
+                        <p>We build structures that last. Proper foundations, correct concrete mixes, and adherence to building codes are non-negotiable in our process.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>One Dedicated Team</h3>
+                        <p>A single team manages your entire project. This ensures consistency, quality control, and seamless execution from foundation to finishing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERTISE -->
+        <section class="content-container">
+            <h2 class="section-title">Our Expertise</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Aluminum Specialization</h3>
+                    <p>25+ years of aluminum fabrication expertise. We understand this material better than anyone - from thermal expansion to corrosion resistance in Nigerian climate.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Complete Construction</h3>
+                    <p>End-to-end construction management. From land preparation to final finishing, we coordinate all aspects of your building project.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Project Coordination</h3>
+                    <p>We connect you with all necessary professionals - architects, engineers, surveyors - and manage the entire construction process for you.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM PHILOSOPHY -->
+        <section class="team-philosophy">
+            <div class="content-container">
+                <h2>Our Promise to You</h2>
+                <p>We don't just construct buildings; we build <strong>trust</strong>, <strong>relationships</strong>, and <strong>legacies</strong> that stand for generations. Your project receives the same meticulous attention whether it's a single window or an entire estate.</p>
+                
+                <div style="margin-top: 2rem;">
+                    <a href="contact.html" class="gold-button" style="color: var(--black);">START YOUR PROJECT WITH US</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <span><a href="tel:+2348038378739">+234 803 837 8739</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:solmideconcernslimited@gmail.com">solmideconcernslimited@gmail.com</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ogun, Nigeria</span>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://facebook.com/Solmide" class="social-link" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/+2348038378739" class="social-link" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#aluminum">Aluminum Works</a></li>
+                    <li><a href="services.html#construction">House Construction</a></li>
+                    <li><a href="services.html#coordination">Project Coordination</a></li>
+                    <li><a href="services.html#realestate">Real Estate Services</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            Solmide Concerns Limited © 2026 | CAC Registered: RC 8540703<br>
+            Built by <a href="https://emltechstudio.site" target="_blank">EML Tech Studio</a>
+        </div>
+    </footer>
+</body>
+</html>
